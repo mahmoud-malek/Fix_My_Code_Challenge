@@ -2,8 +2,7 @@
 
 class square():
 
-    width = 0
-    height = 0
+    side_length = 0
 
     def __init__(self, *args, **kwargs):
         for key, value in kwargs.items():
@@ -11,18 +10,18 @@ class square():
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.width
+        return self.side_length ** 2
 
     def PermiterOfMySquare(self):
-        return (self.width * 2) + (self.width * 2)
+        return 4 * self.side_length
 
     def __str__(self):
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.side_length, self.side_length)
 
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=9)
+    s = square(side_length=12)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
